@@ -101,7 +101,7 @@ exports.createUser = async (req, res) => {
     phone: req.body.phone,
     idcard: req.body.idcard,
     image: req.body.image,
-    userId: "USER-" + count,
+    userId: "USER-" + (count + 1 ),
     password: CryptoJS.AES.encrypt(
       CryptoJS.enc.Utf8.parse(password), process.env.SECRET_KEY
     ).toString(),
